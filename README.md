@@ -1,7 +1,7 @@
 # Vehicle_Service_Management_System
 ## Description
 This Application is single Alone Application. Its developed to manage Vehicle Service Center and Solve few problems to Vehicle Maintenance.
-#### This website designs for showing some information about my career.I categorize them into few sections...
+##  Main functions of the System
 * Start Fade Window
 * Login Interface
 * Home/Main DashBoard Interface
