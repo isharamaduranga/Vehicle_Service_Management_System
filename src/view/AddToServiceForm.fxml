@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="905.0" prefWidth="1630.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddToServiceFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#002b52" height="60.0" layoutX="6.0" layoutY="24.0" stroke="#002b52" strokeType="INSIDE" strokeWidth="2.0" width="1630.0" AnchorPane.bottomAnchor="845.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <JFXTextField fx:id="txtSid" labelFloat="true" layoutX="23.0" layoutY="141.0" prefHeight="31.0" prefWidth="230.0" promptText="SERVICE ID">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtVnumber" labelFloat="true" layoutX="291.0" layoutY="141.0" onKeyReleased="#txtVnumberKeyRleased" prefHeight="31.0" prefWidth="230.0" promptText="VEHICLE NUMBER">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtMnumber" editable="false" labelFloat="true" layoutX="562.0" layoutY="141.0" prefHeight="31.0" prefWidth="230.0" promptText="MODEL NUMBER" unFocusColor="#4059a9">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtNic" editable="false" labelFloat="true" layoutX="1112.0" layoutY="141.0" prefHeight="31.0" prefWidth="230.0" promptText="OWNER NIC" unFocusColor="#4059a9">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtModel" editable="false" labelFloat="true" layoutX="834.0" layoutY="141.0" prefHeight="31.0" prefWidth="230.0" promptText="MODEL" unFocusColor="#4059a9">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXTextField>
+      <TableView fx:id="tblServices" layoutX="18.0" layoutY="306.0" prefHeight="474.0" prefWidth="1254.0" stylesheets="@../DarkTheme.css">
+         <columns>
+            <TableColumn fx:id="colSid" prefWidth="147.0" text="SERVICE ID" />
+            <TableColumn fx:id="colVnum" prefWidth="175.0" text="VEHICLE NUMBER" />
+            <TableColumn fx:id="colModelNum" prefWidth="159.0" text="MODEL NUMBER" />
+            <TableColumn fx:id="colModel" minWidth="0.0" prefWidth="176.0" text="MODEL " />
+            <TableColumn fx:id="colOnic" prefWidth="156.0" text="OWNER NIC" />
+            <TableColumn fx:id="colOname" prefWidth="176.0" text="OWNER NAME" />
+            <TableColumn fx:id="colStype" prefWidth="142.0" text="SERVICE TYPE" />
+            <TableColumn fx:id="colDate" prefWidth="120.0" text="RECEIVE DATE" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="btnPrint" layoutX="1351.0" layoutY="802.0" onAction="#printOnAction" onMouseMoved="#btnMouseMovedOnAction" prefHeight="52.0" prefWidth="205.0" ripplerFill="#00ff2f" styleClass="buttonLightBlue" stylesheets="@../DarkTheme.css" text="PRINT" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="28.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/print.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btnDelete" layoutX="1058.0" layoutY="225.0" onAction="#btnDeleteOnAction" onMouseMoved="#btnMouseMovedOnAction" prefHeight="44.0" prefWidth="175.0" styleClass="buttonDelete" stylesheets="@../DarkTheme.css" text="DELETE" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="28.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/delete.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btnAdd" layoutX="861.0" layoutY="225.0" onAction="#btnAddOnAction" onMouseMoved="#btnMouseMovedOnAction" prefHeight="44.0" prefWidth="175.0" styleClass="buttonAdd" stylesheets="@../DarkTheme.css" text="ADD" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="28.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/add.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <Label layoutX="36.0" layoutY="12.0" text="ADD TO SERVICE" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbSType" labelFloat="true" layoutX="23.0" layoutY="223.0" prefHeight="39.0" prefWidth="230.0" promptText="SERVICE TYPE" unFocusColor="#4d4d4d" />
+      <JFXTextArea fx:id="txtBill" labelFloat="true" layoutX="1278.0" layoutY="309.0" prefHeight="474.0" prefWidth="346.0" />
+      <JFXTextField fx:id="txtName" editable="false" labelFloat="true" layoutX="1381.0" layoutY="141.0" prefHeight="39.0" prefWidth="230.0" promptText="OWNER NAME" unFocusColor="#4059a9">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXTextField>
+      <Label alignment="CENTER" layoutX="314.0" layoutY="222.0" prefHeight="44.0" prefWidth="161.0" style="-fx-background-color: #20bf6b; -fx-background-radius: 0.5EM;" text="SERVICE ID" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <FontAwesomeIcon fill="WHITE" glyphName="SEARCH" layoutX="324.0" layoutY="249.0" />
+      <JFXTextField fx:id="txtSearch" layoutX="500.0" layoutY="228.0" prefHeight="35.0" prefWidth="322.0" />
+      <JFXButton fx:id="btnClear" layoutX="1255.0" layoutY="225.0" onAction="#btnClearOnAction" onMouseMoved="#btnMouseMovedOnAction" prefHeight="44.0" prefWidth="175.0" styleClass="buttonLightBlue" stylesheets="@../DarkTheme.css" text="CLEAR" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="28.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/clear.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <Label layoutX="1226.0" layoutY="18.0" text="HOME " textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="1288.0" layoutY="8.0" text="&gt;" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="1312.0" layoutY="18.0" text="ADD TO SERVICE" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="39.0" layoutX="12.0" layoutY="72.0" stroke="WHITE" strokeType="INSIDE" width="573.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.5631067961165048" startY="0.2621359223300971">
+               <stops>
+                  <Stop color="#9100a3" />
+                  <Stop color="WHITE" offset="0.9767689684569482" />
+                  <Stop color="#5d37d000" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Label layoutX="37.0" layoutY="77.0" text="LAST VEHICLE NO   :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblLstVnum" alignment="CENTER" blendMode="EXCLUSION" contentDisplay="CENTER" layoutX="258.0" layoutY="75.0" prefHeight="32.0" prefWidth="145.0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

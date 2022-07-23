@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+
+<StackPane fx:id="paneOfFirst" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1100.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SplashWindowFormController">
+   <children>
+      <ImageView fitHeight="200.0" fitWidth="775.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/welcomelogo2.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="10.0" layoutY="10.0" prefHeight="781.0" prefWidth="1142.0">
+         <children>
+            <Circle fx:id="c11" centerX="10.0" fill="#002b52" layoutX="160.0" layoutY="363.0" radius="30.0" strokeMiterLimit="8.0" strokeType="INSIDE" strokeWidth="5.0">
+               <stroke>
+                  <LinearGradient endX="1.0" endY="1.0" startX="0.024271844660194174">
+                     <stops>
+                        <Stop color="WHITE" />
+                        <Stop color="RED" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+            </Circle>
+            <Circle fx:id="c22" fill="#e8dce5" layoutX="170.0" layoutY="363.0" radius="18.0" stroke="#ff2f00" strokeMiterLimit="5.0" strokeType="INSIDE" strokeWidth="5.0" style="-fx-stroke-dash-array: 25;" />
+            <Circle fx:id="c1" fill="#002b52" layoutX="327.0" layoutY="378.0" radius="48.0" strokeType="INSIDE" strokeWidth="5.0">
+               <stroke>
+                  <LinearGradient endX="1.0" endY="1.0" startX="0.7378640776699029">
+                     <stops>
+                        <Stop color="RED" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+            </Circle>
+            <Circle fx:id="c2" fill="#e8dce5" layoutX="327.0" layoutY="378.0" radius="33.0" stroke="#ff2f00" strokeType="INSIDE" strokeWidth="5.0" style="-fx-stroke-dash-array: 25;" />
+            <Circle fill="WHITE" layoutX="170.0" layoutY="362.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="WHITE" layoutX="327.0" layoutY="378.0" radius="14.0" stroke="BLACK" strokeType="INSIDE" />
+         </children>
+      </Pane>
+   </children>
+</StackPane>

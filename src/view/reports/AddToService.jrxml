@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 7.9.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="AddToService" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a974962c-5b69-4ed7-8a77-934fa33072fb">
+	<parameter name="sid" class="java.lang.String"/>
+	<parameter name="vnum" class="java.lang.String"/>
+	<parameter name="vModel" class="java.lang.String"/>
+	<parameter name="vModelNum" class="java.lang.String"/>
+	<parameter name="ownerNic" class="java.lang.String"/>
+	<parameter name="ownerName" class="java.lang.String"/>
+	<parameter name="sType" class="java.lang.String"/>
+	<parameter name="date" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="150" splitType="Stretch">
+			<line>
+				<reportElement x="-1" y="139" width="555" height="1" forecolor="#544E4D" uuid="50e78459-bd85-4641-87f0-ccffe8568cd9"/>
+			</line>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="202" y="114" width="100" height="18" forecolor="#3B3838" uuid="3179408e-cfae-4721-97dd-ac215f0eb3d2"/>
+				<textElement>
+					<font size="13" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm">
+				<reportElement x="311" y="114" width="100" height="18" forecolor="#3B3838" uuid="6864943b-b774-48df-855d-d47d4dac4d9e"/>
+				<textElement>
+					<font size="13" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="31" width="440" height="89" forecolor="#3B3838" uuid="dc1da0ba-9f8e-4313-af48-f5a828e269a4"/>
+				<textElement textAlignment="Center">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[                ~~AUTO MODIFY SERVICE  CENTER~~ 
+		 No. 195/1/A Main Street, Colombo. 
+		 077- 6127572 / 0365686887  
+		 Email: isha9702@gmail.com  ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="30" forecolor="#1010EB" uuid="8f37d912-c16b-421f-b18e-157369e2e1fe"/>
+				<textElement textAlignment="Center">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[WELCOME !!!]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-1" y="141" width="555" height="1" forecolor="#544E4D" uuid="2421ee09-64ce-46a3-bb84-ca79a330de3b"/>
+			</line>
+		</band>
+	</title>
+	<detail>
+		<band height="349" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="4" width="555" height="30" uuid="db39cb2d-771a-400f-b139-859a6274415c"/>
+				<textElement textAlignment="Center">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[~~~~~ SERVICE DETAILS ~~~~~]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="342" width="555" height="1" forecolor="#544E4D" uuid="c6f65b53-b6e2-47f3-86c3-66677e2aaac0"/>
+			</line>
+			<line>
+				<reportElement x="0" y="340" width="555" height="1" forecolor="#544E4D" uuid="ce7d63e7-0f13-4b20-ba73-346f4db5258e"/>
+			</line>
+			<staticText>
+				<reportElement x="162" y="35" width="134" height="30" forecolor="#1F1D1D" uuid="ecc2ce53-4a4c-4be3-8fad-4586d7fd970c">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Service ID            :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="162" y="73" width="134" height="30" forecolor="#1F1D1D" uuid="7bc67fe4-3afd-4df6-bce5-48b0e15a0582">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Vehicle Number  :   ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="162" y="110" width="134" height="30" forecolor="#1F1D1D" uuid="be2ce516-31a8-477c-854b-576f14b33afb">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Vehicle Model     :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="163" y="148" width="134" height="30" forecolor="#1F1D1D" uuid="2039dd20-40ff-4aad-a255-cc70c2c549a7">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Model Number    :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="162" y="185" width="134" height="30" forecolor="#1F1D1D" uuid="6a9cf4ac-dd3d-4ecd-a195-d2fa3fe60c67">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Owner NIC           :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="162" y="221" width="134" height="30" forecolor="#1F1D1D" uuid="db831687-42e4-429d-b5d9-2fded70ae9f9">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Owner Name       :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="162" y="258" width="134" height="30" forecolor="#1F1D1D" uuid="22d32d2d-f7ad-4c4b-8cf9-b8781dc6f489">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Service Type       :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="162" y="295" width="134" height="30" forecolor="#1F1D1D" uuid="0085c0bd-a28f-4bb6-9a90-7b4511aa0325">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date                     :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="311" y="35" width="146" height="30" uuid="f51408cb-4375-41c4-98b0-e9b08a4e3395">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{sid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="311" y="73" width="146" height="30" uuid="8dff0307-ab9d-40e3-9785-1f8bef182c8e"/>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{vnum}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="311" y="110" width="146" height="30" uuid="720e5f17-96ab-48c3-ac9e-de50f7d54191"/>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{vModel}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="311" y="148" width="146" height="30" uuid="28b670a7-f09a-4e74-ac33-b8c534d6a72a"/>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{vModelNum}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="311" y="185" width="146" height="30" uuid="cfb6db06-a19e-47b5-bf3e-be33ef523c12">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ownerNic}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="311" y="221" width="146" height="30" uuid="4264eb28-96ed-4aeb-beae-e66b9978c4df">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ownerName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="311" y="258" width="146" height="30" uuid="6bc2b31f-d7db-4326-a793-5a2407788ec2"/>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{sType}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="311" y="295" width="146" height="30" uuid="526d33b8-d824-4341-946b-20d837e1b2f3"/>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{date}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="55" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="12" width="555" height="30" uuid="92491c3c-0d9d-4e75-a753-85fb4b19180c"/>
+				<textElement textAlignment="Center">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Thank You....]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

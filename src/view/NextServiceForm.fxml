@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="nextServiceContext" prefHeight="905.0" prefWidth="1630.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.NextServiceFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="134.0" layoutX="28.0" layoutY="737.0" stroke="#868686" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="INSIDE" strokeWidth="2.0" width="722.0" />
+      <JFXButton alignment="BASELINE_CENTER" layoutX="25.0" layoutY="79.0" onAction="#btnNextServiceLeft" prefHeight="48.0" prefWidth="205.0" style="-fx-background-radius: 2.0EM;" styleClass="buttonLightBlue" stylesheets="@../DarkTheme.css" text="    BACK TO HOME" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <FontAwesomeIcon fill="WHITE" glyphName="HOME" layoutX="35.0" layoutY="113.0" size="2.0EM" />
+      <ScrollPane layoutX="19.0" layoutY="191.0" prefHeight="528.0" prefWidth="1599.0">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="510.0" prefWidth="1700.0">
+               <children>
+                  <TableView fx:id="tblNextService" layoutY="1.0" prefHeight="512.0" prefWidth="1700.0" stylesheets="@../DarkTheme.css" AnchorPane.bottomAnchor="-3.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.0">
+                     <columns>
+                        <TableColumn fx:id="colCusid" prefWidth="200.0" text="CUSTOMER ID" />
+                        <TableColumn fx:id="colVnum" prefWidth="220.0" text="VEHICLE NUMBER" />
+                        <TableColumn fx:id="colCusName" prefWidth="280.0" text="CUSTOMER NAME" />
+                        <TableColumn fx:id="colAddress" prefWidth="320.0" text="ADDRESS" />
+                        <TableColumn fx:id="colTPNumber" prefWidth="200.0" text="T.P NUMBER" />
+                        <TableColumn fx:id="colEmail" prefWidth="250.0" text="EMAIL" />
+                        <TableColumn fx:id="colDate" maxWidth="444.0" minWidth="20.0" prefWidth="220.0" text="DATE" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#002b52" height="60.0" layoutY="60.0" stroke="#002b52" strokeType="INSIDE" strokeWidth="2.0" width="1630.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Label layoutX="36.0" layoutY="12.0" text="NEXT SERVICE" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="297.0" layoutY="118.0" prefHeight="44.0" prefWidth="205.0" style="-fx-background-color: #20bf6b; -fx-background-radius: 0.5EM;" text="VEHICLE NUMBER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtVnumberSearch" labelFloat="true" layoutX="549.0" layoutY="115.0" prefHeight="44.0" prefWidth="258.0" promptText="Vehicle Number" />
+      <Label alignment="CENTER" layoutX="857.0" layoutY="118.0" prefHeight="44.0" prefWidth="205.0" style="-fx-background-color: #20bf6b; -fx-background-radius: 0.5EM;" text="NIC" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtOnicSearch" labelFloat="true" layoutX="1109.0" layoutY="115.0" prefHeight="44.0" prefWidth="258.0" promptText="Client Nic" />
+      <JFXDatePicker fx:id="txtNextServiceDate" layoutX="105.0" layoutY="772.0" prefHeight="52.0" prefWidth="338.0" promptText="ENTER NEXT SERVICE DATE" />
+      <JFXButton fx:id="btnPrint" layoutX="1287.0" layoutY="772.0" onAction="#printTableOnAction" prefHeight="52.0" prefWidth="205.0" ripplerFill="#00ff2f" styleClass="buttonLightBlue" stylesheets="@../DarkTheme.css" text="PRINT" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="28.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/print.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton layoutX="972.0" layoutY="772.0" onAction="#clearFieldOnAction" prefHeight="52.0" prefWidth="205.0" ripplerFill="#00ff2f" styleClass="buttonLightBlue" stylesheets="@../DarkTheme.css" text="CLEAR" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="28.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/clear.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton layoutX="486.0" layoutY="772.0" onAction="#nextServiceDateSearchOnAction" prefHeight="52.0" prefWidth="215.0" ripplerFill="#00ff2f" style="-fx-background-radius: 2.0EM;" styleClass="buttonDBlue" stylesheets="@../DarkTheme.css" text="SEARCH" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <FontAwesomeIcon fill="WHITE" glyphName="SEARCH" layoutX="523.0" layoutY="806.0" size="1.5EM" />
+      <Label layoutX="1226.0" layoutY="18.0" text="HOME " textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="1288.0" layoutY="8.0" text="&gt;" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="1312.0" layoutY="18.0" text="NEXT SERVICE" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

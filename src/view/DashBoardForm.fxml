@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="fullDashBoardContext" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1018.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardFormController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="110.0" prefWidth="1920.0" style="-fx-background-color: #c8d6e5;" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane layoutX="314.0" layoutY="5.0" prefHeight="50.0" prefWidth="1920.0" style="-fx-background-color: #222f3e;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label fx:id="lblDate" layoutX="709.0" layoutY="4.0" prefHeight="42.0" prefWidth="167.0" text="2022-03-05" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblDay" layoutX="942.0" layoutY="4.0" prefHeight="42.0" prefWidth="167.0" text="SUNDAY" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblTime" layoutX="1142.0" layoutY="4.0" prefHeight="42.0" prefWidth="167.0" text="4:20:30" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="25.0" />
+                           </font>
+                        </Label>
+                     </children></Pane>
+                  <HBox layoutX="587.0" layoutY="50.0" prefHeight="60.0" prefWidth="1630.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="290.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+                     <children>
+                        <JFXButton fx:id="btnCustomerMenu" onAction="#customerListOnAction" prefHeight="60.0" prefWidth="271.0" styleClass="menuItem" stylesheets="@../DarkTheme.css" text="Customer List">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font></JFXButton>
+                        <JFXButton fx:id="btnOnGoingServiceMenu" onAction="#onGoingServiceOnAction" prefHeight="60.0" prefWidth="271.0" styleClass="menuItem" stylesheets="@../DarkTheme.css" text="On Going Service">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font></JFXButton>
+                        <JFXButton fx:id="btnServiceHistoryMenu" onAction="#serviceHistoryOnAction" prefHeight="60.0" prefWidth="271.0" styleClass="menuItem" stylesheets="@../DarkTheme.css" text="Service History">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font></JFXButton>
+                        <JFXButton fx:id="btnNextServiceMenu" onAction="#nextServiceOnAction" prefHeight="60.0" prefWidth="271.0" styleClass="menuItem" stylesheets="@../DarkTheme.css" text="Next Service">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font></JFXButton>
+                        <JFXButton onAction="#btnLogOutOnAction" prefHeight="60.0" prefWidth="271.0" styleClass="menuItem" stylesheets="@../DarkTheme.css" text="Log-Out">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font></JFXButton>
+                        <JFXButton onAction="#btnShutDownOnAction" prefHeight="60.0" prefWidth="272.0" styleClass="menuItem" stylesheets="@../DarkTheme.css" text="Shut Down" textFill="RED">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../asserts/OFF.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </top>
+         <left>
+            <AnchorPane prefHeight="200.0" prefWidth="290.0" style="-fx-background-color: #002B52FF;" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox layoutY="200.0" prefHeight="689.0" prefWidth="290.0" AnchorPane.bottomAnchor="19.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="200.0">
+                     <children>
+                        <JFXButton alignment="BASELINE_LEFT" onAction="#dashBoardOnAction" prefHeight="65.0" prefWidth="290.0" styleClass="sidebarItem" stylesheets="@../DarkTheme.css" text="  DASH-BOARD" textFill="WHITE">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../asserts/homeWhite.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton alignment="BASELINE_LEFT" onAction="#addCustomerOnAction" prefHeight="65.0" prefWidth="290.0" styleClass="sidebarItem" stylesheets="@../DarkTheme.css" text="  Customers" textFill="WHITE">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../asserts/userWhite.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton alignment="BASELINE_LEFT" onAction="#addVehicleOnAction" prefHeight="65.0" prefWidth="290.0" styleClass="sidebarItem" stylesheets="@../DarkTheme.css" text="  Vehicles" textFill="WHITE">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../asserts/carWhite.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton alignment="BASELINE_LEFT" onAction="#AddToServiceOnAction" prefHeight="65.0" prefWidth="290.0" styleClass="sidebarItem" stylesheets="@../DarkTheme.css" text="  Add to Service" textFill="WHITE">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../asserts/addsServiceWhite.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton alignment="BASELINE_LEFT" onAction="#ServiceResultOnAction" prefHeight="65.0" prefWidth="290.0" styleClass="sidebarItem" stylesheets="@../DarkTheme.css" text="  Service Result" textFill="WHITE">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../asserts/serviceResultWhite.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton alignment="BASELINE_LEFT" onAction="#VehicleReturnOnAction" prefHeight="65.0" prefWidth="290.0" styleClass="sidebarItem" stylesheets="@../DarkTheme.css" text="  Vehicle Return" textFill="WHITE">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../asserts/returnVehicleWhite.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton alignment="BASELINE_LEFT" onAction="#WaitingRepairOnAction" prefHeight="65.0" prefWidth="290.0" styleClass="sidebarItem" stylesheets="@../DarkTheme.css" text="  Waiting-Repair" textFill="WHITE">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../asserts/repaireWhite.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton alignment="BASELINE_LEFT" onAction="#WaitingCleanOnAction" prefHeight="65.0" prefWidth="290.0" styleClass="sidebarItem" stylesheets="@../DarkTheme.css" text="  Wating-Clean" textFill="WHITE">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../asserts/cleanWhite.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton alignment="BASELINE_LEFT" onAction="#ServicesOnAction" prefHeight="65.0" prefWidth="290.0" styleClass="sidebarItem" stylesheets="@../DarkTheme.css" text="  Services" textFill="WHITE">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../asserts/serviceWhite.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton alignment="BASELINE_LEFT" onAction="#IncomeOnAction" prefHeight="65.0" prefWidth="290.0" styleClass="sidebarItem" stylesheets="@../DarkTheme.css" text="  Income" textFill="WHITE">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../asserts/incomeWhite.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+                  <ImageView fitHeight="74.0" fitWidth="254.0" layoutX="18.0" layoutY="71.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../asserts/welcomelogo.png" />
+                     </image>
+                  </ImageView>
+                  <Circle fx:id="d1" fill="#001cb9" layoutX="76.0" layoutY="119.0" radius="21.0" strokeDashOffset="4.0" strokeType="INSIDE" strokeWidth="5.0" style="-fx-stroke-dash-array: 20;">
+                     <stroke>
+                        <LinearGradient endX="1.0" endY="1.0" startX="0.7572815533980582">
+                           <stops>
+                              <Stop color="RED" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </stroke>
+                  </Circle>
+                  <Circle fill="WHITE" layoutX="76.0" layoutY="119.0" radius="11.0" stroke="#cd9292" strokeType="INSIDE" strokeWidth="4.0" />
+                  <Circle fx:id="d2" fill="#001cb9" layoutX="17.0" layoutY="115.0" radius="13.0" strokeDashOffset="4.0" strokeType="INSIDE" strokeWidth="4.0" style="-fx-stroke-dash-array: 13;">
+                     <stroke>
+                        <LinearGradient endX="1.0" endY="1.0" startX="0.7572815533980582">
+                           <stops>
+                              <Stop color="RED" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </stroke>
+                  </Circle>
+                  <Circle fill="WHITE" layoutX="17.0" layoutY="115.0" radius="6.0" stroke="#cd9292" strokeType="INSIDE" strokeWidth="3.0" />
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane fx:id="dashBoardContext" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="905.0" fitWidth="1630.0" layoutY="8.0" nodeOrientation="INHERIT" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <image>
+                        <Image url="@../asserts/background.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="lblCustomers" alignment="BASELINE_CENTER" layoutX="235.0" layoutY="121.0" prefHeight="140.0" prefWidth="235.0" style="-fx-background-color: #a29bfe; -fx-background-radius: 2.0em;" text="02">
+                     <font>
+                        <Font name="System Bold" size="28.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="60.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../asserts/client.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+                           <stops>
+                              <Stop color="#d73434" />
+                              <Stop color="#3c2e2e" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill></Label>
+                  <Label fx:id="lblPendingRepairing" alignment="BASELINE_CENTER" layoutX="235.0" layoutY="322.0" prefHeight="140.0" prefWidth="235.0" style="-fx-background-color: #D980FA; -fx-background-radius: 2.0em;" text="10">
+                     <font>
+                        <Font name="System Bold" size="28.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="60.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../asserts/repaire.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+                           <stops>
+                              <Stop color="#d73434" />
+                              <Stop color="#3c2e2e" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+                  <Label fx:id="lblPendingCleaning" alignment="BASELINE_CENTER" layoutX="1111.0" layoutY="121.0" prefHeight="140.0" prefWidth="235.0" style="-fx-background-color: #fd79a8; -fx-background-radius: 2.0em;" text="08">
+                     <font>
+                        <Font name="System Bold" size="28.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="60.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../asserts/clean.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+                           <stops>
+                              <Stop color="#d73434" />
+                              <Stop color="#3c2e2e" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+                  <Label fx:id="lblPendingServices" alignment="BASELINE_CENTER" layoutX="815.0" layoutY="121.0" prefHeight="140.0" prefWidth="235.0" style="-fx-background-color: #fdcb6e; -fx-background-radius: 2.0em;" text="06">
+                     <font>
+                        <Font name="System Bold" size="28.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="60.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../asserts/services.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+                           <stops>
+                              <Stop color="#d73434" />
+                              <Stop color="#3c2e2e" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+                  <Label fx:id="lblVehicles" alignment="BASELINE_CENTER" layoutX="529.0" layoutY="121.0" prefHeight="140.0" prefWidth="235.0" style="-fx-background-color: #00b894; -fx-background-radius: 2.0em;" text="04">
+                     <font>
+                        <Font name="System Bold" size="28.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="60.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../asserts/vehicle.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+                           <stops>
+                              <Stop color="#d73434" />
+                              <Stop color="#3c2e2e" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+                  <Label fx:id="lblOngoinServices" alignment="BASELINE_CENTER" layoutX="529.0" layoutY="322.0" prefHeight="140.0" prefWidth="235.0" style="-fx-background-color: #A3CB38; -fx-background-radius: 2.0em;" text="12">
+                     <font>
+                        <Font name="System Bold" size="28.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="60.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../asserts/ongoing.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+                           <stops>
+                              <Stop color="#d73434" />
+                              <Stop color="#3c2e2e" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+                  <Label fx:id="lblInvoices" alignment="BASELINE_CENTER" layoutX="813.0" layoutY="322.0" prefHeight="140.0" prefWidth="235.0" style="-fx-background-color: #1289A7; -fx-background-radius: 2.0em;" text="05">
+                     <font>
+                        <Font name="System Bold" size="28.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="60.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../asserts/invoice.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+                           <stops>
+                              <Stop color="#d73434" />
+                              <Stop color="#3c2e2e" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+                  <Label fx:id="lblInvoiceDetails" alignment="BASELINE_CENTER" layoutX="1111.0" layoutY="322.0" prefHeight="140.0" prefWidth="235.0" style="-fx-background-color: #009432; -fx-background-radius: 2.0em;" text="05">
+                     <font>
+                        <Font name="System Bold" size="28.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="60.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../asserts/invoiceDetail.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+                           <stops>
+                              <Stop color="#d73434" />
+                              <Stop color="#3c2e2e" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+                  <Text layoutX="321.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CLIENTS">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="610.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VEHICLES" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="856.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CUSTOMER DETAILS">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="1153.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PENDING CLEANING">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="269.0" layoutY="345.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PENDING REPAIRING">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="567.0" layoutY="345.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ONGOING SERVICES">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="899.0" layoutY="345.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INVOICES">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="1161.0" layoutY="345.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INVOICES DETAILS">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Text>
+                  <Label layoutX="429.0" layoutY="25.0" prefHeight="53.0" prefWidth="317.0" text="WHAT OUR SERVICES :">
+                     <font>
+                        <Font name="System Bold" size="28.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="lblText" layoutX="760.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="588.6708984375">
+                     <font>
+                        <Font name="System Bold" size="33.0" />
+                     </font>
+                     <fill>
+                        <LinearGradient cycleMethod="REFLECT" endY="0.6941747572815534" startX="0.38834951456310685" startY="0.35922330097087374">
+                           <stops>
+                              <Stop color="#0015ff" />
+                              <Stop color="RED" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Text>
+                  <PieChart fx:id="incomePieChart" layoutX="426.0" layoutY="499.0" prefHeight="390.0" prefWidth="689.0" title="MONTHLEY INCOME" />
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

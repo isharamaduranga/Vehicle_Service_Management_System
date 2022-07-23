@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="892.0" prefWidth="1630.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.IncomeFormController">
+   <children>
+      <Rectangle fx:id="recMonth" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="115.0" layoutX="435.0" layoutY="216.0" opacity="0.0" strokeLineCap="ROUND" strokeType="INSIDE" strokeWidth="2.0" width="795.0">
+         <stroke>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#1027c7" />
+                  <Stop color="#941919" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </stroke>
+      </Rectangle>
+      <ImageView fx:id="totIncomeRectangle" fitHeight="115.0" fitWidth="949.0" layoutX="365.0" layoutY="76.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/background.jpg" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tblIncomes" layoutX="291.0" layoutY="345.0" prefHeight="394.0" prefWidth="1050.0" stylesheets="@../DarkTheme.css">
+         <columns>
+            <TableColumn fx:id="colSid" prefWidth="220.0" text="SERVICE ID" />
+            <TableColumn fx:id="colDate" prefWidth="441.0" text="DATE" />
+            <TableColumn fx:id="colAmount" prefWidth="388.0" text="AMOUNT" />
+         </columns>
+      </TableView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#002b52" height="60.0" layoutX="10.0" layoutY="70.0" stroke="#002b52" strokeType="INSIDE" strokeWidth="2.0" width="1630.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Label layoutX="36.0" layoutY="12.0" text="INCOME" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c4c7c9" height="115.0" layoutX="365.0" layoutY="77.0" opacity="0.16" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" strokeWidth="0.0" width="949.0" />
+      <Label fx:id="lblTotal" layoutX="395.0" layoutY="89.0" prefHeight="88.0" prefWidth="531.0" text="T O T A L   I N C O M E :  " textFill="#757373">
+         <font>
+            <Font size="45.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="monthLoadCombo" labelFloat="true" layoutX="477.0" layoutY="241.0" onAction="#ComboOnActionSelectMonth" prefHeight="50.0" prefWidth="305.0" promptText="SELECT MONTH" unFocusColor="#00b972" />
+      <Label fx:id="lblMonthIncome" alignment="CENTER" contentDisplay="CENTER" layoutX="891.0" layoutY="240.0" opacity="0.84" prefHeight="60.0" prefWidth="295.0" style="-fx-background-color: #1B9CFC; -fx-background-radius: 2.0em;" stylesheets="@../DarkTheme.css" text="MONTHLY  INCOME" textFill="#2f2f2e">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font></Label>
+      <Label fx:id="lblTotalIncome" alignment="CENTER" contentDisplay="CENTER" layoutX="937.0" layoutY="89.0" prefHeight="88.0" prefWidth="319.0" text="00000">
+         <font>
+            <Font name="System Bold" size="45.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnPrint" layoutX="1292.0" layoutY="785.0" onAction="#printOnAction" onMouseMoved="#btnMouseMovedOnAction" prefHeight="52.0" prefWidth="205.0" ripplerFill="#00ff2f" styleClass="buttonLightBlue" stylesheets="@../DarkTheme.css" text="PRINT" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="28.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/print.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <Label layoutX="1226.0" layoutY="18.0" text="HOME " textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="1288.0" layoutY="8.0" text="&gt;" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="1312.0" layoutY="18.0" text="INCOME" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

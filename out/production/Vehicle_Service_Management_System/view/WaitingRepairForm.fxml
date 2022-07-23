@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="905.0" prefWidth="1630.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.WaitingRepairFormController">
+   <children>
+      <TableView fx:id="tblWaitingRepairing" layoutX="28.0" layoutY="206.0" prefHeight="550.0" prefWidth="1576.0" stylesheets="@../DarkTheme.css">
+         <columns>
+            <TableColumn fx:id="colServiceId" prefWidth="187.0" text="SERVICE ID" />
+            <TableColumn fx:id="colVehicleNo" prefWidth="163.00003051757812" text="VEHICLE NUMBER" />
+            <TableColumn fx:id="colModelNum" prefWidth="247.0" text="MODEL NUMBER" />
+            <TableColumn fx:id="colModel" minWidth="0.0" prefWidth="189.0" text="MODEL " />
+            <TableColumn fx:id="colOnic" prefWidth="172.0" text="OWNER NIC" />
+            <TableColumn fx:id="colOname" prefWidth="200.0" text="OWNER NAME" />
+            <TableColumn fx:id="colSType" prefWidth="201.0" text="SERVICE TYPE" />
+            <TableColumn fx:id="colDate" maxWidth="215.0" prefWidth="215.0" text="DATE" />
+         </columns>
+      </TableView>
+      <Label alignment="CENTER" layoutX="372.0" layoutY="115.0" prefHeight="44.0" prefWidth="220.0" style="-fx-background-color: #20bf6b; -fx-background-radius: 0.5EM;" text="VEHICLE NUMBER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtSearchVnum" layoutX="624.0" layoutY="112.0" prefHeight="44.0" prefWidth="322.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#002b52" height="60.0" layoutX="26.0" layoutY="44.0" stroke="#002b52" strokeType="INSIDE" strokeWidth="2.0" width="1630.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Label layoutX="36.0" layoutY="12.0" text="WAITING LIST FOR REPAIRING" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnPrint" layoutX="1361.0" layoutY="812.0" onAction="#tableDataPrintOnAction" onMouseMoved="#btnMouseMovedOnAction" prefHeight="52.0" prefWidth="205.0" ripplerFill="#00ff2f" styleClass="buttonLightBlue" stylesheets="@../DarkTheme.css" text="PRINT" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="28.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/print.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <FontAwesomeIcon fill="WHITE" glyphName="SEARCH" layoutX="382.0" layoutY="146.0" size="1.5EM" />
+      <Label layoutX="1226.0" layoutY="18.0" text="HOME " textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="1288.0" layoutY="8.0" text="&gt;" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="1312.0" layoutY="18.0" text="WAITING LIST FOR REPAIRING" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
