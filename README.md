@@ -57,6 +57,7 @@ This Application is single Alone Application. Its developed to manage Vehicle Se
 ## Technology used
 * CSS
 * Java
+* javaFx
 
 ## License
 **Copyright @ 2022 My Profile All Right Reserved By Ishara Maduranga**
